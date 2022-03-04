@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/el120621/fb-avaya/issues"
   },
-  "homepage": "https://github.com/el120621/fb-avaya#readme"
+  "homepage": "https://github.com/el120621/fb-avaya#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }

@@ -1,9 +1,9 @@
 const connector = require('./connector')
-const functions = require('../services/functions')
+const config = require('../config');
 
 const verifyWebhook = (req, res) => {
     // Your verify token. Should be a random string.
-    let VERIFY_TOKEN = "token123";
+    let VERIFY_TOKEN = config.facebook.verifyToken;
     // Parse the query params
     let mode = req.query['hub.mode'];
     let token = req.query['hub.verify_token'];
@@ -35,6 +35,7 @@ const webhookFacebook = (req, res) => {
                 // console.log(entry.messaging[0].sender.id,entry.messaging[0].message.text);
                 //callSendAPI(entry.messaging[0].sender.id,entry.messaging[0].message.text);
 
+                                         //PSID                          //MESSAGE
                 connector.fbToACR(entry.messaging[0].sender.id,entry.messaging[0].message.text)
                 
             }
@@ -51,6 +52,9 @@ const webhookFacebook = (req, res) => {
     }
 
 }
+
+
+
 
  
 

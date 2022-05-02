@@ -29,25 +29,6 @@ const callSendAPI = (sender_psid, response) => {
   
   }
 
-  const sendToClient = (id,chat) => {
-    request({
-      uri: 'http://localhost:3001/fbchat',
-      method: 'POST',
-      json: {
-          "id":id,
-          "message":chat,
-          "right":false
-      }}, (err,res,body) => {
-        if(!err){
-          //console.log(body) ok
-        }    
-      })
-  }
-
-
-  
-
 module.exports = {
-    callSendAPI,
-    sendToClient
+    callSendAPI
 }

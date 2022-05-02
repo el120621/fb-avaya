@@ -17,7 +17,8 @@ const config = {
 		secretKey: process.env.AWS_SECRET_KEY
 	},
 	facebook: {
-		accessToken: process.env.PAGE_ACCESS_TOKEN
+		accessToken: process.env.PAGE_ACCESS_TOKEN,
+		verifyToken: process.env.FB_VERIFY_TOKEN
 	}
 }
 
